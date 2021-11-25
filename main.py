@@ -7,16 +7,16 @@ def sum_digit(i):
 		summe += int(digit)
 	return summe
 
-def check_same_digit(m):
+def check_same_digit(m, exponent):
 	"""Die Funktion checkt, welche Zahlen von 0 bis m die gleiche Quersumme wie ihre Quadratzahlen haben."""
 	i = 0
 	while i <= m:
-		if sum_digit(i) == sum_digit(i**2):
+		if sum_digit(i) == sum_digit(i**exponent):
 			numbers.append(i)
 		else:
 			pass
 		i += 1
 
 numbers = []
-check_same_digit(1000)
+check_same_digit(1000, 2)
 print(numbers)
